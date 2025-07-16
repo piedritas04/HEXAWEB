@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HEXAMEX - Soluciones de software</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      background: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .navbar-custom {
+      background-color: #2b3f8c;
+    }
+    .navbar-brand img {
+      height: 50px;
+    }
+    .hex-button {
+      width: 80px;
+      height: 46px;
+      background-color: #fff;
+      color: #000;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border: 2px solid black;
+    }
+    .carousel-indicators [data-bs-target] {
+      width: 14px;
+      height: 14px;
+      background-color: #2b3f8c;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      margin: 0 5px;
+    }
+    .carousel-indicators .active {
+      background-color: white;
+      border: 2px solid black;
+    }
+    .hex-shape {
+      width: 60px;
+      height: 60px;
+      background: #2b3f8c;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      margin: 8px;
+      display: inline-block;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .division-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+    .footer-bg {
+      background: #2b3f8c;
+      color: #fff;
+      padding: 0.3rem 0 0.5rem 0;
+    }
+    .footer-logo {
+      width: 60px;
+      margin-right: 1rem;
+    }
+    .social-icon {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    .rounded-img {
+      border-radius: 1rem;
+      object-fit: cover;
+      width: 100%;
+      height: 220px;
+    }
+    .hex-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 768px) {
+      .rounded-img {
+        height: 140px;
+      }
+      .hex-shape {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom px-4">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="imagenes/logo1.png" alt="Logo">
+    <div class="ms-2">
+      <strong>HEXAMEX</strong><br>
+      <small>Soluciones de software</small>
+    </div>
+  </a>
+  <div class="ms-auto d-flex align-items-center">
+    <ul class="navbar-nav me-4">
+      <li class="nav-item"><a class="nav-link fw-bold" href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link fw-bold" href="reclutamiento.html">RECLUTAMIENTO</a></li>
+      <li class="nav-item"><a class="nav-link fw-bold" href="informacion.html">INFORMACIÓN</a></li>
+      <li class="nav-item"><a class="nav-link fw-bold" href="contacto.html">CONTACTO</a></li>
+    </ul>
+    <div class="hex-button">WEB</div>
+  </div>
+</nav>
+
+<!-- Carrusel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+
+    <!-- Imagen 1 -->
+    <div class="carousel-item active">
+      <img src="imagenes/image.png" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Imagen 1">
+    </div>
+
+    <!-- Video -->
+    <div class="carousel-item">
+      <video class="d-block w-100" style="height: 400px; object-fit: cover;" autoplay muted loop>
+        <source src="imagenes/0001-0250.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+
+    <!-- Imagen 2 -->
+    <div class="carousel-item">
+      <img src="imagenes/20 sin título_20250716093726.png" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Imagen 3">
+    </div>
+
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+
+ <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="hex-group mb-3">
+          <div class="hex-shape"></div>
+          <div class="hex-shape"></div>
+          <div class="hex-shape"></div>
+          <div class="hex-shape"></div>
+          <div class="hex-shape"></div>
+          <div class="hex-shape"></div>
+        </div>
+        <h2 class="section-title">¿Que Buscamos?</h2>
+        <p>Talento apasionado que esté listo para enfrentar desafíos y crear soluciones innovadoras. Nos gustaría conocerte si tienes experiencia en desarrollo de software y te encanta aprender continuamente.</p>
+        <h3 class="section-title mt-4">Objetivo General</h3>
+        <p>En Hexamex buscamos desarrollar soluciones tecnológicas modulares e innovadoras que optimicen los procesos de nuestros clientes, garantizando calidad, escalabilidad y una experiencia centrada en el usuario.</p>
+      </div>
+      <div class="col-lg-5 text-center">
+        <img src="imagenes/Captura de pantalla 2025-07-15 193649.png" alt="Ilustración" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+
+  <!-- Divisiones Section -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="hex-group mb-3">
+          <div class="hex-shape"></div>
+          <div class="hex-shape"></div>
+          <div class="hex-shape"></div>
+        </div>
+        <h2 class="section-title">¡Conoce las Divisiones de Hexamex!</h2>
+        <p>En Hexamex no solo desarrollamos software, también exploramos y damos vida a ideas desde múltiples disciplinas.</p>
+        <div class="row text-center mt-4">
+          <div class="col-6 col-md-6 mb-3">
+            <img src="https://img.icons8.com/color/96/000000/paint-palette.png" class="division-icon" alt="Creativa">
+            <div><strong>División Creativa</strong></div>
+            <small>Artes Digitales & Visuales</small>
+          </div>
+          <div class="col-6 col-md-6 mb-3">
+            <img src="https://img.icons8.com/color/96/000000/source-code.png" class="division-icon" alt="Tecnológica">
+            <div><strong>División Tecnológica</strong></div>
+            <small>Desarrollo de Sistemas</small>
+          </div>
+          <div class="col-6 col-md-6 mb-3">
+            <img src="imagenes/MEGAFONO.png" class="division-icon" alt="Marketing">
+            <div><strong>División de Marketing</strong></div>
+            <small>Estrategia & Posicionamiento</small>
+          </div>
+          <div class="col-6 col-md-6 mb-3">
+            <img src="imagenes/proyectos.png" class="division-icon" alt="Proyectos">
+            <div><strong>División de Proyectos</strong></div>
+            <small>Gestión & Experiencia</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Equipo" class="rounded-img mb-3">
+        <p>Con el crecimiento constante de los desafíos tecnológicos y creativos, en Hexamex entendemos que ofrecer soluciones integrales requiere especialización y visión multidisciplinaria. Por eso, estructuramos nuestras capacidades en cuatro divisiones que reflejan las fortalezas clave de nuestra empresa.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transformar Proyecto Section -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2 text-center">
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80" alt="Reunión" class="rounded-img mb-3">
+      </div>
+      <div class="col-md-6 order-md-1">
+        <h2 class="section-title">¿Listo para transformar tu proyecto en algo extraordinario?</h2>
+        <p>En Hexamex convertimos ideas en soluciones reales: diseño con intención, tecnología funcional, marketing que conecta y gestión que da resultados.<br>¿Tienes un reto? Nosotros tenemos al equipo.</p>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Footer -->
+<footer class="footer-bg mt-5">
+  <div class="container">
+    <div class="row align-items-center mb-3">
+      <div class="col-md-2 text-center text-md-start mb-3 mb-md-0">
+        <img src="imagenes/logo1.png" class="footer-logo" alt="Logo">
+      </div>
+      <div class="col-md-7 text-center text-md-start">
+        <strong>©2025 Hexamex • Soluciones de software</strong><br>
+        <span><i class="fa-solid fa-envelope"></i> hexamexsw@gmail.com | <i class="fa-solid fa-phone"></i> +52 771 000 0000</span><br>
+        <span><i class="fa-solid fa-location-dot"></i> Pachuca, Hgo. • México</span>
+      </div>
+      <div class="col-md-3 text-center text-md-end">
+        <span>Síguenos:</span>
+        <a href="https://www.facebook.com/groups/687213214297061" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/hexamexsw/" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/hexamexsw" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/@Hexamex-SW" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="hex-group justify-content-end">
+      <div class="hex-shape"></div>
+      <div class="hex-shape"></div>
+      <div class="hex-shape"></div>
+      <div class="hex-shape"></div>
+      <div class="hex-shape"></div>
+      <div class="hex-shape"></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
